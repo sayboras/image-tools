@@ -31,7 +31,6 @@ packages=(
   make
   ninja-build
   pkg-config
-  pkg-config-aarch64-linux-gnu
   python2
   python3
   python3-pip
@@ -41,14 +40,14 @@ packages=(
 export DEBIAN_FRONTEND=noninteractive
 
 cat > /etc/apt/sources.list << EOF
-deb [arch=amd64] http://archive.ubuntu.com/ubuntu focal main restricted universe multiverse
-deb [arch=amd64] http://security.ubuntu.com/ubuntu focal-updates main restricted universe multiverse
-deb [arch=amd64] http://security.ubuntu.com/ubuntu focal-security main restricted universe multiverse
-deb [arch=amd64] http://archive.ubuntu.com/ubuntu focal-backports main restricted universe multiverse
-deb [arch=arm64] http://ports.ubuntu.com/ focal main restricted universe multiverse
-deb [arch=arm64] http://ports.ubuntu.com/ focal-updates main restricted universe multiverse
-deb [arch=arm64] http://ports.ubuntu.com/ focal-security main restricted universe multiverse
-deb [arch=arm64] http://ports.ubuntu.com/ focal-backports main restricted universe multiverse
+deb [arch=amd64] http://archive.ubuntu.com/ubuntu jammy main restricted universe multiverse
+deb [arch=amd64] http://security.ubuntu.com/ubuntu jammy-updates main restricted universe multiverse
+deb [arch=amd64] http://security.ubuntu.com/ubuntu jammy-security main restricted universe multiverse
+deb [arch=amd64] http://archive.ubuntu.com/ubuntu jammy-backports main restricted universe multiverse
+deb [arch=arm64] http://ports.ubuntu.com/ jammy main restricted universe multiverse
+deb [arch=arm64] http://ports.ubuntu.com/ jammy-updates main restricted universe multiverse
+deb [arch=arm64] http://ports.ubuntu.com/ jammy-security main restricted universe multiverse
+deb [arch=arm64] http://ports.ubuntu.com/ jammy-backports main restricted universe multiverse
 EOF
 
 dpkg --add-architecture arm64
